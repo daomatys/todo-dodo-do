@@ -2,9 +2,7 @@ import './checkbox.css';
 
 function Checkbox() {
   return (
-    <div className="checkbox">
-
-    </div>
+    <div className="checkbox" />
   );
 }
 
