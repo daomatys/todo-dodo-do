@@ -6,11 +6,11 @@ import CreatorOfTasks from './components/CreatorOfTasks/CreatorOfTasks';
 const AppContext = React.createContext({});
 
 function useCount() {
-  const context = React.useContext(AppContext)
+  const context = React.useContext(AppContext);
   if (!context) {
-    throw new Error(`useCount must be used within a CountProvider`)
+    throw new Error('useCount must be used within a CountProvider');
   }
-  return context
+  return context;
 }
 
 function App() {
@@ -19,7 +19,8 @@ function App() {
       <header className="App-header">
         <AppContext.Provider value={{
 
-        }}>
+        }}
+        >
           <CreatorOfTasks />
           <ListOfTasks />
         </AppContext.Provider>

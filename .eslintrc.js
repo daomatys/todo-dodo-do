@@ -27,6 +27,10 @@ module.exports = {
     'react/jsx-filename-extension': [
       'warn', 
       { 'extensions': ['.tsx'] }
+    ],
+    'linebreak-style': [
+      "error",
+      "windows"
     ]
   },
 };

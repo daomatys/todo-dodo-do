@@ -5,7 +5,7 @@ function ListOfTasks() {
   return (
     <div className="ListOfTasks">
       <TaskBar
-        note='hello'
+        note="hello"
       />
     </div>
   );
