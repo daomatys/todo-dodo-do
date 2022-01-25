@@ -21,6 +21,14 @@ class TaskBar extends React.Component<ITaskBar> {
     this.note = props.note;
   }
 
+  static handleSwitcherChange(checked:boolean) {
+    console.log(`switch to ${checked}`);
+  }
+
+  static handleRemoverClick() {
+    console.log('clicked');
+  }
+
   render() {
     return (
       <div className="task-bar">
@@ -28,7 +36,7 @@ class TaskBar extends React.Component<ITaskBar> {
           <Switch
             checkedChildren="DONE"
             unCheckedChildren="LAZY"
-            onChange={this.handleSwitcherChange}
+            onChange={TaskBar.handleSwitcherChange}
           />
         </div>
         <div className="task-bar__note">
@@ -38,19 +46,11 @@ class TaskBar extends React.Component<ITaskBar> {
           <Button
             type="primary"
             icon={<DeleteOutlined />}
-            onClick={this.handleRemoverClick}
+            onClick={TaskBar.handleRemoverClick}
           />
         </div>
       </div>
     );
-  }
-
-  handleSwitcherChange(checked:boolean) {
-    console.log(`switch to ${checked}`);
-  }
-
-  handleRemoverClick() {
-    console.log('clicked');
   }
 }
 

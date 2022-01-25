@@ -32,8 +32,8 @@ module.exports = {
       { 'extensions': ['.tsx', '.ts'] }
     ],
     'linebreak-style': [
-      "error",
-      "windows"
+      'error',
+      'windows'
     ]
   },
 };

@@ -5,7 +5,13 @@ function ListOfTasks() {
   return (
     <div className="ListOfTasks">
       <TaskBar
-        note="hello"
+        note="TopTask"
+      />
+      <TaskBar
+        note="MidTask"
+      />
+      <TaskBar
+        note="BotTask"
       />
     </div>
   );
