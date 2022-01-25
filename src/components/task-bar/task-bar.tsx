@@ -1,4 +1,10 @@
 import './task-bar.css';
+import 'antd/dist/antd.css';
+import { Switch } from 'antd';
+
+function onChange(checked:boolean) {
+  console.log(`switch to ${checked}`);
+}
 
 function TaskBar() {
   return (
@@ -7,7 +13,7 @@ function TaskBar() {
 
       </div>
       <div className='task-bar__state-switcher'>
-
+        <Switch onChange={onChange} />
       </div>
     </div>
   );
