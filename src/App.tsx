@@ -2,16 +2,13 @@ import './App.css';
 import React from 'react';
 import ListOfTasks from './components/ListOfTasks/ListOfTasks';
 import CreatorOfTasks from './components/CreatorOfTasks/CreatorOfTasks';
+import ITaskBar from './components/TaskBar/TaskBar.interface';
 
 const AppContext = React.createContext({});
-
-function useCount() {
-  const context = React.useContext(AppContext);
-  if (!context) {
-    throw new Error('useCount must be used within a CountProvider');
-  }
-  return context;
-}
+const taskSamples:ITaskBar[] = [
+  { note: 'x' },
+  { note: 'y' },
+]
 
 function App() {
   return (
@@ -22,7 +19,9 @@ function App() {
         }}
         >
           <CreatorOfTasks />
-          <ListOfTasks />
+          <ListOfTasks 
+            tasks={taskSamples}
+          />
         </AppContext.Provider>
       </header>
     </div>

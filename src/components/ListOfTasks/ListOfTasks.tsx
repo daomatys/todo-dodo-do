@@ -1,18 +1,11 @@
-import TaskBar from '../TaskBar/TaskBar';
 import './ListOfTasks.css';
+import TaskBar from '../TaskBar/TaskBar';
+import ITaskBar from '../TaskBar/TaskBar.interface';
 
-function ListOfTasks() {
+function ListOfTasks({ tasks }: { tasks: ITaskBar[] }) {
   return (
     <div className="ListOfTasks">
-      <TaskBar
-        note="TopTask"
-      />
-      <TaskBar
-        note="MidTask"
-      />
-      <TaskBar
-        note="BotTask"
-      />
+      {tasks.map( task => <TaskBar note={task.note} /> )}
     </div>
   );
 }
