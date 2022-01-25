@@ -19,10 +19,11 @@ module.exports = {
   },
   plugins: [
     'react',
-    '@typescript-eslint',
+    '@typescript-eslint'
   ],
   ignorePatterns: [
     '_blank',
+    '*.interface.tsx'
   ],
   rules: {
     'import/extensions': 'off',

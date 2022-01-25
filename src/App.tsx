@@ -8,7 +8,7 @@ const AppContext = React.createContext({});
 const taskSamples:ITaskBar[] = [
   { note: 'x' },
   { note: 'y' },
-]
+];
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         }}
         >
           <CreatorOfTasks />
-          <ListOfTasks 
+          <ListOfTasks
             tasks={taskSamples}
           />
         </AppContext.Provider>

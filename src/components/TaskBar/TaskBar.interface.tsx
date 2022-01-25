@@ -1,3 +1,3 @@
-export default interface ITaskBar{
-  note: string
+export default interface ITaskBar {
+  note: string,
 }
