@@ -22,7 +22,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   ignorePatterns: [
-    "_blank",
+    '_blank',
   ],
   rules: {
     'import/extensions': 'off',
