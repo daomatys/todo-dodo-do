@@ -23,11 +23,13 @@ module.exports = {
   rules: {
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
+    'no-undef': [
+      'off',
+      { 'extensions': ['.test.tsx'] }
+    ],
     'react/jsx-filename-extension': [
-      'warn',
-      {
-        'extensions': ['.tsx']
-      }
+      'warn', 
+      { 'extensions': ['.tsx'] }
     ]
   },
 };
