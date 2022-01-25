@@ -1,18 +1,24 @@
 import './TaskBar.css';
 import 'antd/dist/antd.css';
-import React from 'react';
+
 import {
   Switch,
   Button,
 } from 'antd';
+
 import {
   DeleteOutlined,
 } from '@ant-design/icons';
 
-class TaskBar extends React.Component {
+import React from 'react';
+import ITaskBar from './TaskBar.interface';
 
-  super(props:Object) {
-    this.props = props;
+class TaskBar extends React.Component {
+  note: string;
+
+  constructor(props:ITaskBar) {
+    super(props);
+    this.note = props.note;
   }
 
   render() {
@@ -26,7 +32,7 @@ class TaskBar extends React.Component {
           />
         </div>
         <div className="task-bar__note">
-          <span>test text</span>
+          <span>{this.note}</span>
         </div>
         <div className="task-bar__remover">
           <Button

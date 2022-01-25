@@ -4,10 +4,10 @@ import './ListOfTasks.css';
 function ListOfTasks() {
   return (
     <div className="ListOfTasks">
-      <TaskBar />
-      <TaskBar />
-      <TaskBar />
-      <TaskBar />
+      <TaskBar props={{
+        note: 'hello'
+      }}/>
+
     </div>
   );
 }
