@@ -8,25 +8,33 @@ import {
   DeleteOutlined,
 } from '@ant-design/icons';
 
-function onChange(checked:boolean) {
+function handleSwitcherChange(checked:boolean) {
   console.log(`switch to ${checked}`);
+}
+
+function handleRemoverClick() {
+  console.log('clicked');
 }
 
 function TaskBar() {
   return (
     <div className="task-bar">
-      <div className="task-bar__note">
-        <span />
-      </div>
       <div className="task-bar__state-switcher">
         <Switch
           checkedChildren="DONE"
           unCheckedChildren="LAZY"
-          onChange={onChange}
+          onChange={handleSwitcherChange}
         />
       </div>
-      <div className="task-bar__trashcan">
-        <Button type="primary" icon={<DeleteOutlined />} />
+      <div className="task-bar__note">
+        <span>test text</span>
+      </div>
+      <div className="task-bar__remover">
+        <Button
+          type="primary"
+          icon={<DeleteOutlined />}
+          onClick={handleRemoverClick}
+        />
       </div>
     </div>
   );

@@ -1,6 +1,13 @@
 .task-bar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+  border-radius: 10px;
   width: 33vw;
   background-color: #000;
+}
+
+.task-bar__state-switcher {
+  width: 65px;
 }
