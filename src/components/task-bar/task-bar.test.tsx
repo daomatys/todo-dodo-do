@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import Checkbox from './checkbox';
+import TaskBar from './task-bar';
 
 test('renders learn react link', () => {
-  render(<Checkbox />);
+  render(<TaskBar />);
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
