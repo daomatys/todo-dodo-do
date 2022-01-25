@@ -13,7 +13,11 @@ function TaskBar() {
 
       </div>
       <div className='task-bar__state-switcher'>
-        <Switch onChange={onChange} />
+        <Switch
+          checkedChildren="DONE"
+          unCheckedChildren="LAZY"
+          onChange={onChange}
+        />
       </div>
     </div>
   );
