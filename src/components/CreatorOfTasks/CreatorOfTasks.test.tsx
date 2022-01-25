@@ -1,6 +1,6 @@
 import {
   render,
-  screen, 
+  screen,
 } from '@testing-library/react';
 import CreatorOfTasks from './CreatorOfTasks';
 
