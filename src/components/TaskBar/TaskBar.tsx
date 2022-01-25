@@ -1,5 +1,6 @@
 import './TaskBar.css';
 import 'antd/dist/antd.css';
+import React from 'react';
 import {
   Switch,
   Button,
@@ -8,36 +9,43 @@ import {
   DeleteOutlined,
 } from '@ant-design/icons';
 
-function handleSwitcherChange(checked:boolean) {
-  console.log(`switch to ${checked}`);
-}
+class TaskBar extends React.Component {
 
-function handleRemoverClick() {
-  console.log('clicked');
-}
+  super(props:Object) {
+    this.props = props;
+  }
 
-function TaskBar() {
-  return (
-    <div className="task-bar">
-      <div className="task-bar__state-switcher">
-        <Switch
-          checkedChildren="DONE"
-          unCheckedChildren="LAZY"
-          onChange={handleSwitcherChange}
-        />
+  render() {
+    return (
+      <div className="task-bar">
+        <div className="task-bar__state-switcher">
+          <Switch
+            checkedChildren="DONE"
+            unCheckedChildren="LAZY"
+            onChange={this.handleSwitcherChange}
+          />
+        </div>
+        <div className="task-bar__note">
+          <span>test text</span>
+        </div>
+        <div className="task-bar__remover">
+          <Button
+            type="primary"
+            icon={<DeleteOutlined />}
+            onClick={this.handleRemoverClick}
+          />
+        </div>
       </div>
-      <div className="task-bar__note">
-        <span>test text</span>
-      </div>
-      <div className="task-bar__remover">
-        <Button
-          type="primary"
-          icon={<DeleteOutlined />}
-          onClick={handleRemoverClick}
-        />
-      </div>
-    </div>
-  );
+    );
+  }
+
+  handleSwitcherChange(checked:boolean) {
+    console.log(`switch to ${checked}`);
+  }
+
+  handleRemoverClick() {
+    console.log('clicked');
+  }
 }
 
 export default TaskBar;
