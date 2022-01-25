@@ -29,7 +29,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'react/jsx-filename-extension': [
       'warn', 
-      { 'extensions': ['.tsx'] }
+      { 'extensions': ['.tsx', '.ts'] }
     ],
     'linebreak-style': [
       "error",
