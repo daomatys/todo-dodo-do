@@ -21,6 +21,9 @@ module.exports = {
     'react',
     '@typescript-eslint',
   ],
+  ignorePatterns: [
+    "_blank",
+  ],
   rules: {
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
