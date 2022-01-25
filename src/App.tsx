@@ -1,14 +1,11 @@
-import TaskBar from './components/TaskBar/TaskBar';
+import ListOfTasks from './components/ListOfTasks/ListOfTasks';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <TaskBar />
-        <TaskBar />
-        <TaskBar />
-        <TaskBar />
+        <ListOfTasks />
       </header>
     </div>
   );
