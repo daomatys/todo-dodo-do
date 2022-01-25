@@ -1,13 +1,14 @@
-import TaskBar from './components/task-bar/task-bar';
+import TaskBar from './components/TaskBar/TaskBar';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div>
-          <TaskBar />
-        </div>
+        <TaskBar />
+        <TaskBar />
+        <TaskBar />
+        <TaskBar />
       </header>
     </div>
   );

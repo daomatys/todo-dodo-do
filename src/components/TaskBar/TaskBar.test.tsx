@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import TaskBar from './task-bar';
+import TaskBar from './TaskBar';
 
 test('renders learn react link', () => {
   render(<TaskBar />);
