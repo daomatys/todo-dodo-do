@@ -13,7 +13,7 @@ import {
 import React from 'react';
 import ITaskBar from './TaskBar.interface';
 
-class TaskBar extends React.Component {
+class TaskBar extends React.Component<ITaskBar> {
   note: string;
 
   constructor(props:ITaskBar) {
