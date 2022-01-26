@@ -62,7 +62,7 @@ function TaskBar(props:ITaskBar) {
       <div className="TaskBar__StateSwitcher">
         <Switch
           checkedChildren="DONE"
-          unCheckedChildren="LAZY"
+          unCheckedChildren="WAIT"
           onChange={handleSwitcherChange}
         />
       </div>
