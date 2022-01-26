@@ -9,21 +9,40 @@ import {
   DoubleRightOutlined,
 } from '@ant-design/icons';
 
-function handleInvokerClick() {
-  // invoke the damned ejector
-}
+import React, {
+  useContext
+} from 'react';
 
-function createNewTask() {
-  // there
-}
-
-function createNewTaskOnEnterPressed({ key }: {key:string}) {
-  if (key === 'Enter') {
-    createNewTask();
-  }
-}
+import AppContext from '../App.context';
 
 function CreatorOfTasks() {
+  const {
+    tasks,
+    tasksCount
+    setTasks,
+    setTasksCount
+  } = useContext(AppContext);
+
+  const handleInvokerClick = () => {
+    // invoke the damned ejector
+  }
+  
+  const createNewTask = () => {
+    setTasks([
+      ...tasks,
+      {
+        note: '1'
+      }
+    ]);
+    setTasksCount(tasksCount + 1);
+  }
+  
+  const createNewTaskOnEnterPressed = ({ key }: {key:string}) => {
+    if (key === 'Enter') {
+      createNewTask();
+    }
+  }
+
   return (
     <div className="CreatorOfTasks">
       <div className="CreatorOfTasks__EjectorInvoker">

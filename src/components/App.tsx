@@ -17,6 +17,8 @@ function App() {
       <header className="App-header">
         <AppContext.Provider
           value={{
+            tasks,
+            tasksCount,
             setTasks,
             setTasksCount,
           }}
