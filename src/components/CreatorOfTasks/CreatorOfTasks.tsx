@@ -5,7 +5,8 @@ import {
 } from 'antd';
 
 import {
-  PlusOutlined
+  PlusOutlined,
+  DoubleRightOutlined
 } from '@ant-design/icons';
 
 function handleInvokerClick() {
@@ -22,7 +23,7 @@ function CreatorOfTasks() {
       <div className="CreatorOfTasks__EjectorInvoker">
         <Button
           type="primary"
-          icon={<PlusOutlined />}
+          icon={<DoubleRightOutlined />}
           onClick={handleInvokerClick}
         />
       </div>
@@ -30,7 +31,7 @@ function CreatorOfTasks() {
         <div className="CreatorOfTasks__Input">
           <Input.Group compact>
             <Input
-              style={{ width: 'calc(100% - 200px)' }}
+              style={{ width: 'calc(100% - 32px)' }}
               placeholder="Whatcha gonna reach today"
             />
             <Button
