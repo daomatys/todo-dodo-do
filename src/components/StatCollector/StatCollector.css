@@ -1,3 +1,13 @@
 .StatCollector {
+  display: flex;
   background-color: rgb(255, 0, 0);
+}
+
+.StatCollector__TasksCount_Overall,
+.StatCollector__TasksCount_Completed {
+  font-size: 3rem;
+}
+
+.StatCollector__TasksCount_Completed {
+  color: #51af51;
 }
