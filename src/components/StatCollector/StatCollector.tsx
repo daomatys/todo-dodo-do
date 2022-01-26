@@ -11,8 +11,7 @@ function StatCollector() {
     completedTasksCount,
   } = useContext(AppContext);
 
-
-  if (tasksCount > 0) {
+  if (tasksCount > 1) {
     return (
       <div className="StatCollector">
         <span className="StatCollector__TasksCount_Completed">{completedTasksCount}</span>
@@ -21,14 +20,20 @@ function StatCollector() {
         tasks were completed
       </div>
     );
-  } else {
+  }
+  if (tasksCount < 1) {
     return (
       <div className="StatCollector">
-        Nothing to do :'(
+        Nothing to do :&apos;(
       </div>
     );
   }
-
+  return (
+    <div className="StatCollector">
+      <span className="StatCollector__TasksCount_Overall">1</span>
+      task was{ completedTasksCount > 0 ? '' : 'n\'t' } completed
+    </div>
+  );
 }
 
 export default StatCollector;
