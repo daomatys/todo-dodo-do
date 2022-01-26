@@ -1,11 +1,16 @@
 .StatCollector {
   display: flex;
-  background-color: rgb(255, 0, 0);
+  font-size: 1.5rem;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .StatCollector__TasksCount_Overall,
 .StatCollector__TasksCount_Completed {
+  margin-inline: 10px;
   font-size: 3rem;
+  font-weight: 700;
 }
 
 .StatCollector__TasksCount_Completed {

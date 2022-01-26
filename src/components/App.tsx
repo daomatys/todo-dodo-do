@@ -8,6 +8,7 @@ import ListOfTasks from './ListOfTasks/ListOfTasks';
 import CreatorOfTasks from './CreatorOfTasks/CreatorOfTasks';
 import AppContext from './App.context';
 import DEFAULTS from './App.defaults';
+import StatCollector from './StatCollector/StatCollector';
 
 function App() {
   const [tasks, setTasks] = useState(DEFAULTS.tasks);
@@ -24,6 +25,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <AppContext.Provider value={value}>
+          <StatCollector />
           <CreatorOfTasks />
           <ListOfTasks tasks={tasks} />
         </AppContext.Provider>
