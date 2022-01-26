@@ -5,7 +5,7 @@ Linted with [ESLint](https://eslint.org/).\
 Decorated according to [Airbnb](https://github.com/airbnb/javascript) eslint-config extender.
 
 ## Third-party Libraries
-- [**React**](https://reactjs.org/) (version 17.0.2")
+- [**React**](https://reactjs.org/) (version 17.0.2)
 - [**Ant-Design**](https://ant.design/) (version 4.18.5)
 
 ## Available Scripts
