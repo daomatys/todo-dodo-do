@@ -9,8 +9,8 @@ import {
   DoubleRightOutlined,
 } from '@ant-design/icons';
 
-import React, {
-  useContext
+import {
+  useContext,
 } from 'react';
 
 import AppContext from '../App.context';
@@ -18,30 +18,30 @@ import AppContext from '../App.context';
 function CreatorOfTasks() {
   const {
     tasks,
-    tasksCount
+    tasksCount,
     setTasks,
-    setTasksCount
+    setTasksCount,
   } = useContext(AppContext);
 
   const handleInvokerClick = () => {
     // invoke the damned ejector
-  }
-  
+  };
+
   const createNewTask = () => {
     setTasks([
       ...tasks,
       {
-        note: '1'
-      }
+        note: '1',
+      },
     ]);
     setTasksCount(tasksCount + 1);
-  }
-  
+  };
+
   const createNewTaskOnEnterPressed = ({ key }: {key:string}) => {
     if (key === 'Enter') {
       createNewTask();
     }
-  }
+  };
 
   return (
     <div className="CreatorOfTasks">

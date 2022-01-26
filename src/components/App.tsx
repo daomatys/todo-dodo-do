@@ -1,4 +1,5 @@
 import {
+  useMemo,
   useState,
 } from 'react';
 
@@ -12,21 +13,19 @@ function App() {
   const [tasks, setTasks] = useState(DEFAULTS.tasks);
   const [tasksCount, setTasksCount] = useState(DEFAULTS.count);
 
+  const value = useMemo(() => ({
+    tasks,
+    tasksCount,
+    setTasks,
+    setTasksCount,
+  }), []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <AppContext.Provider
-          value={{
-            tasks,
-            tasksCount,
-            setTasks,
-            setTasksCount,
-          }}
-        >
+        <AppContext.Provider value={value}>
           <CreatorOfTasks />
-          <ListOfTasks
-            tasks={tasks}
-          />
+          <ListOfTasks tasks={tasks} />
         </AppContext.Provider>
       </header>
     </div>

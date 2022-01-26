@@ -10,8 +10,6 @@ import {
   DeleteOutlined,
 } from '@ant-design/icons';
 
-import ITaskBar from './TaskBar.interface';
-
 function handleSwitcherChange(checked:boolean) {
   console.log(checked);
   // toggle task state
@@ -21,7 +19,7 @@ function handleRemoverClick() {
   // invoke context remove of that element
 }
 
-function TaskBar(props:ITaskBar) {
+function TaskBar({ note }:{note:string}) {
   return (
     <div className="TaskBar">
       <div className="TaskBar__StateSwitcher">
@@ -32,7 +30,7 @@ function TaskBar(props:ITaskBar) {
         />
       </div>
       <div className="TaskBar__Note">
-        <span>{props.note}</span>
+        <span>{note}</span>
       </div>
       <div className="TaskBar__Remover">
         <Button
