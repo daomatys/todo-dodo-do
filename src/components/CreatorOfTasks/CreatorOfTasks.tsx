@@ -13,12 +13,14 @@ function handleInvokerClick() {
   // invoke the damned ejector
 }
 
-function handleAcceptorClick() {
-  // push new list example
+function createNewTask() {
+  //there
 }
 
-function createNewTask() {
-  
+function createNewTaskOnEnterPressed({key}: {key:string}) {
+  if (key === 'Enter') {
+    createNewTask();
+  }
 }
 
 function CreatorOfTasks() {
@@ -36,12 +38,12 @@ function CreatorOfTasks() {
           <Input
             style={{ width: 'calc(100% - 32px)' }}
             placeholder="Whatcha gonna achieve?"
-            onKeyPress={createNewTask}
+            onKeyPress={createNewTaskOnEnterPressed}
           />
           <Button
             type="primary"
             icon={<PlusOutlined />}
-            onClick={handleAcceptorClick}
+            onClick={createNewTask}
           />
         </Input.Group>
       </div>
