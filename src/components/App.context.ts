@@ -1,30 +1,25 @@
 import React from 'react';
 import ITaskBar from './TaskBar/TaskBar.interface';
-import DEFAULTS from './App.defaults';
+
+interface ITaskFunction {
+  (a:ITaskBar[]):void,
+}
+
+interface ICountFunction {
+  (x:number): void,
+}
 
 interface IAppContext {
   tasks: ITaskBar[],
-  setTasks: (alpha:ITaskBar[]) => void,
+  setTasks: ITaskFunction,
 
   tasksCount: number,
-  setTasksCount: (beta:number) => void,
+  setTasksCount: ICountFunction,
 
   completedTasksCount: number,
-  setCompletedTasksCount: (beta:number) => void,
+  setCompletedTasksCount: ICountFunction,
 }
 
-const alpha = DEFAULTS.tasks;
-const beta = DEFAULTS.count;
-
-const DefaultAppContext:IAppContext = {
-  tasks: alpha,
-  tasksCount: beta,
-  completedTasksCount: beta,
-  setTasks: (alpha) => { },
-  setTasksCount: (beta) => { },
-  setCompletedTasksCount: (beta) => { },
-};
-
-const AppContext = React.createContext<IAppContext>(DefaultAppContext);
+const AppContext = React.createContext<IAppContext>({} as IAppContext);
 
 export default AppContext;
