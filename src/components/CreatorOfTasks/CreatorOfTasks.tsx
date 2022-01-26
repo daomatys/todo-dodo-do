@@ -2,6 +2,7 @@ import './CreatorOfTasks.css';
 import {
   Button,
   Input,
+  Form
 } from 'antd';
 
 import {
@@ -43,6 +44,10 @@ function CreatorOfTasks() {
     }
   };
 
+  const onFinishFailed = () => {
+    return;
+  }
+
   return (
     <div className="CreatorOfTasks">
       <div className="CreatorOfTasks__EjectorInvoker">
@@ -53,18 +58,30 @@ function CreatorOfTasks() {
         />
       </div>
       <div className="CreatorOfTasks__EjectorContent">
-        <Input.Group compact>
-          <Input
-            style={{ width: 'calc(100% - 32px)' }}
-            placeholder="Whatcha gonna achieve?"
-            onKeyPress={createNewTaskOnEnterPressed}
-          />
-          <Button
-            type="primary"
-            icon={<PlusOutlined />}
-            onClick={createNewTask}
-          />
-        </Input.Group>
+        <Form
+          onFinish={createNewTask}
+          onFinishFailed={onFinishFailed}
+          autoComplete="off"
+        >
+          <Input.Group compact>
+            <Form.Item
+              rules={[
+                { required: true, len: 20, type: 'string' }
+              ]}
+            >
+              <Input
+                style={{ width: 'calc(100% - 32px)' }}
+                placeholder="Whatcha gonna achieve?"
+                onKeyPress={createNewTaskOnEnterPressed}
+              />
+            </Form.Item>
+            <Button
+              type="primary"
+              icon={<PlusOutlined />}
+              htmlType="submit"
+            />
+          </Input.Group>
+        </Form>
       </div>
     </div>
   );
