@@ -10,56 +10,39 @@ import {
   DeleteOutlined,
 } from '@ant-design/icons';
 
-import ReactDOM from 'react-dom';
-import React from 'react';
 import ITaskBar from './TaskBar.interface';
 
-class TaskBar extends React.Component<ITaskBar> {
-  note: string;
+function handleSwitcherChange(checked:boolean) {
+  console.log(checked);
+  // toggle task state
+}
 
-  elem: React.RefObject<HTMLDivElement>;
+function handleRemoverClick() {
+  //invoke context remove of that element
+}
 
-  constructor(props:ITaskBar) {
-    super(props);
-    this.elem = React.createRef();
-    this.note = props.note;
-  }
-
-  static handleSwitcherChange(checked:boolean) {
-    // toggle task state
-  }
-
-  handleRemoverClick() {
-    const elem = this.elem.current;
-
-    if (elem) {
-      ReactDOM.unmountComponentAtNode(elem);
-    }
-  }
-
-  render() {
-    return (
-      <div className="TaskBar" ref={this.elem}>
-        <div className="TaskBar__StateSwitcher">
-          <Switch
-            checkedChildren="DONE"
-            unCheckedChildren="LAZY"
-            onChange={TaskBar.handleSwitcherChange}
-          />
-        </div>
-        <div className="TaskBar__Note">
-          <span>{this.note}</span>
-        </div>
-        <div className="TaskBar__Remover">
-          <Button
-            type="primary"
-            icon={<DeleteOutlined />}
-            onClick={this.handleRemoverClick.bind(this)}
-          />
-        </div>
+function TaskBar(props:ITaskBar) {
+  return (
+    <div className="TaskBar">
+      <div className="TaskBar__StateSwitcher">
+        <Switch
+          checkedChildren="DONE"
+          unCheckedChildren="LAZY"
+          onChange={handleSwitcherChange}
+        />
       </div>
-    );
-  }
+      <div className="TaskBar__Note">
+        <span>{props.note}</span>
+      </div>
+      <div className="TaskBar__Remover">
+        <Button
+          type="primary"
+          icon={<DeleteOutlined />}
+          onClick={handleRemoverClick}
+        />
+      </div>
+    </div>
+  );
 }
 
 export default TaskBar;
