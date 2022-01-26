@@ -7,7 +7,8 @@ const DEFAULTS = {
       note: 'Then finish last case.',
     },
   ],
-  count: 0,
+  count: 2,
+  completed: 0,
 };
 
 export default DEFAULTS;
