@@ -1,10 +1,10 @@
 const DEFAULTS = {
   tasks: [
     {
-      note: 'Go do first case!',
+      note: 'Go do first case, cmon!',
     },
     {
-      note: 'Then finish on last case.',
+      note: 'Then finish last case.',
     },
   ],
   count: 0,

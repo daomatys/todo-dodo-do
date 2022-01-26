@@ -8,10 +8,10 @@ import CreatorOfTasks from './CreatorOfTasks/CreatorOfTasks';
 import AppContext from './App.context';
 import DEFAULTS from './App.defaults';
 
-const [tasks, setTasks] = useState(DEFAULTS.tasks);
-const [tasksCount, setTasksCount] = useState(DEFAULTS.count);
-
 function App() {
+  const [tasks, setTasks] = useState(DEFAULTS.tasks);
+  const [tasksCount, setTasksCount] = useState(DEFAULTS.count);
+
   return (
     <div className="App">
       <header className="App-header">
