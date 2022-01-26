@@ -9,6 +9,7 @@ import {
 import {
   DeleteOutlined,
 } from '@ant-design/icons';
+
 import ReactDOM from 'react-dom';
 import React from 'react';
 import ITaskBar from './TaskBar.interface';
