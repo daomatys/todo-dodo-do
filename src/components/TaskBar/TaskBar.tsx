@@ -36,7 +36,6 @@ class TaskBar extends React.Component<ITaskBar> {
   }
   
   componentDidMount() {
-    
     console.log('Mounted: ', this.elem)
   }
 
@@ -58,7 +57,7 @@ class TaskBar extends React.Component<ITaskBar> {
           <Button
             type="primary"
             icon={<DeleteOutlined />}
-            onClick={this.handleRemoverClick}
+            onClick={this.handleRemoverClick.bind(this)}
           />
         </div>
       </div>
