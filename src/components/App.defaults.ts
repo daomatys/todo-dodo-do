@@ -4,12 +4,12 @@ const lastDate = new Date(1995, 12, 18);
 const DEFAULTS = {
   tasks: [
     {
-      id: firstDate.getTime()/1000,
+      id: firstDate.getTime() / 1000,
       note: 'Go and do the first case, c\'mon!',
       done: false,
     },
     {
-      id: lastDate.getTime()/1000,
+      id: lastDate.getTime() / 1000,
       note: 'Then finish the last one.',
       done: false,
     },

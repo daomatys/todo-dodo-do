@@ -5,7 +5,7 @@ import {
 
 import ITaskBar from '../TaskBar/TaskBar.interface';
 import ListOfTasks from './ListOfTasks';
-import DEFAULT from './../App.defaults'
+import DEFAULT from '../App.defaults';
 
 test('renders learn react link', () => {
   const taskSamples:ITaskBar[] = DEFAULT.tasks;

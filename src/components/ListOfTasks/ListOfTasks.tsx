@@ -11,7 +11,7 @@ function ListOfTasks({ tasks }: { tasks: ITaskBar[] }) {
           key={task.id}
           note={task.note}
           done={task.done}
-       />
+        />
       ))}
     </div>
   );

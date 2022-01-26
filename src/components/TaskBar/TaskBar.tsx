@@ -11,13 +11,19 @@ import {
 } from '@ant-design/icons';
 
 import {
-  useContext
+  useContext,
 } from 'react';
 
 import AppContext from '../App.context';
 import ITaskBar from './TaskBar.interface';
 
 function TaskBar(props:ITaskBar) {
+  const {
+    id,
+    done,
+    note,
+  } = props;
+
   const {
     tasks,
     setTasks,
@@ -27,27 +33,29 @@ function TaskBar(props:ITaskBar) {
     setCompletedTasksCount,
   } = useContext(AppContext);
 
-  const thatTaskBarId = props.id.toString();
+  const thatBarId = id.toString();
+  const thatBarDoneState = done;
+  const thatBarNote = note;
 
   const handleSwitcherChange = (checked:boolean) => {
-    const addendum = checked ? 1 : -1 ;
+    const addendum = checked ? 1 : -1;
 
-    setCompletedTasksCount( completedTasksCount + addendum )
-  }
-  
+    setCompletedTasksCount(completedTasksCount + addendum);
+  };
+
   const handleRemoverClick = () => {
     setTasks(
-      tasks.filter( task => task.id.toString() !== thatTaskBarId )
+      tasks.filter(({ id }) => id.toString() !== thatBarId),
     );
-    setTasksCount( tasksCount - 1);
-    
-    if( props.done ) {
-      setCompletedTasksCount( completedTasksCount - 1 );
+    setTasksCount(tasksCount - 1);
+
+    if (thatBarDoneState) {
+      setCompletedTasksCount(completedTasksCount - 1);
     }
-  }
+  };
 
   return (
-    <div className="TaskBar" id={thatTaskBarId}>
+    <div className="TaskBar" id={thatBarId}>
       <div className="TaskBar__StateSwitcher">
         <Switch
           checkedChildren="DONE"
@@ -56,7 +64,7 @@ function TaskBar(props:ITaskBar) {
         />
       </div>
       <div className="TaskBar__Note">
-        <span>{props.note}</span>
+        <span>{thatBarNote}</span>
       </div>
       <div className="TaskBar__Remover">
         <Button
