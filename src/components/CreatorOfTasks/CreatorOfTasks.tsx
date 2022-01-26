@@ -31,7 +31,7 @@ function CreatorOfTasks() {
         <Input.Group compact>
           <Input
             style={{ width: 'calc(100% - 32px)' }}
-            placeholder="Whatcha gonna reach today"
+            placeholder="Whatcha gonna achieve?"
           />
           <Button
             type="primary"

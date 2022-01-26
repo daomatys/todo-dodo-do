@@ -14,9 +14,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <AppContext.Provider value={{
-
-        }}
+        <AppContext.Provider
+          value={{
+            
+          }}
         >
           <CreatorOfTasks />
           <ListOfTasks
