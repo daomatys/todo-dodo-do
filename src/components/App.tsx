@@ -13,15 +13,15 @@ import StatCollector from './StatCollector/StatCollector';
 function App() {
   const [tasks, setTasks] = useState(DEFAULTS.tasks);
   const [tasksCount, setTasksCount] = useState(DEFAULTS.count);
-  const [tasksCompletedCount, setTasksCompletedCount] = useState(DEFAULTS.completed);
+  const [completedTasksCount, setCompletedTasksCount] = useState(DEFAULTS.completed);
 
   const value = useMemo(() => ({
     tasks,
     tasksCount,
     setTasks,
     setTasksCount,
-    tasksCompletedCount,
-    setTasksCompletedCount,
+    completedTasksCount,
+    setCompletedTasksCount,
   }), []);
 
   return (

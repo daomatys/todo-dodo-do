@@ -8,11 +8,12 @@ import './StatCollector.css';
 function StatCollector() {
   const {
     tasksCount,
+    completedTasksCount
   } = useContext(AppContext);
 
   return (
     <div className="StatCollector">
-      <span className="StatCollector__TasksCount_Completed">0</span>
+      <span className="StatCollector__TasksCount_Completed">{completedTasksCount}</span>
       of
       <span className="StatCollector__TasksCount_Overall">{tasksCount}</span>
       tasks were completed
