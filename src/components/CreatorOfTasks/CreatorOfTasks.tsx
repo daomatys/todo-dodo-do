@@ -32,14 +32,16 @@ function CreatorOfTasks() {
   };
 
   const createNewTask = () => {
-    setTasks([
-      ...tasks,
-      {
-        note: inputValue,
-      },
-    ]);
-    setTasksCount(tasksCount + 1);
-    setInputValue('');
+    if ( inputValue.length > 0 ) {
+      setTasks([
+        ...tasks,
+        {
+          note: inputValue,
+        },
+      ]);
+      setTasksCount(tasksCount + 1);
+      setInputValue('');
+    }
   };
 
   const createNewTaskOnEnterPressed = ({ key }: {key:string}) => {
