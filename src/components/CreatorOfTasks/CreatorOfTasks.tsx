@@ -12,6 +12,7 @@ import {
 
 import {
   useContext,
+  useState,
 } from 'react';
 
 import AppContext from '../App.context';
@@ -24,6 +25,8 @@ function CreatorOfTasks() {
     setTasksCount,
   } = useContext(AppContext);
 
+  const [inputValue, setInputValue] = useState('');
+
   const handleInvokerClick = () => {
     // invoke the damned ejector
   };
@@ -32,10 +35,11 @@ function CreatorOfTasks() {
     setTasks([
       ...tasks,
       {
-        note: '1',
+        note: inputValue,
       },
     ]);
     setTasksCount(tasksCount + 1);
+    setInputValue('');
   };
 
   const createNewTaskOnEnterPressed = ({ key }: {key:string}) => {
@@ -71,9 +75,11 @@ function CreatorOfTasks() {
               ]}
             >
               <Input
+                value={inputValue}
                 style={{ width: '100%' }}
                 placeholder="Whatcha gonna achieve?"
                 onKeyPress={createNewTaskOnEnterPressed}
+                onChange={({target}) => setInputValue(target.value)}
               />
             </Form.Item>
             <Button
