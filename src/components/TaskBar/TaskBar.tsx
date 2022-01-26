@@ -10,16 +10,28 @@ import {
   DeleteOutlined,
 } from '@ant-design/icons';
 
-function handleSwitcherChange(checked:boolean) {
-  console.log(checked);
-  // toggle task state
-}
+import {
+  useContext
+} from 'react';
 
-function handleRemoverClick() {
-  // invoke context remove of that element
-}
+import AppContext from '../App.context';
 
 function TaskBar({ note }:{note:string}) {
+  const {
+    completedTasksCount,
+    setCompletedTasksCount,
+  } = useContext(AppContext);
+
+  const handleSwitcherChange = (checked:boolean) => {
+    const addendum = checked ? 1 : -1 ;
+
+    setCompletedTasksCount( completedTasksCount + addendum )
+  }
+  
+  const handleRemoverClick = () => {
+    // invoke context remove of that element
+  }
+
   return (
     <div className="TaskBar">
       <div className="TaskBar__StateSwitcher">
