@@ -34,10 +34,6 @@ class TaskBar extends React.Component<ITaskBar> {
       ReactDOM.unmountComponentAtNode(elem);
     }
   }
-  
-  componentDidMount() {
-    console.log('Mounted: ', this.elem)
-  }
 
   render() {
     console.log('render!');
