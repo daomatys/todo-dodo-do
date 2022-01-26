@@ -20,7 +20,6 @@ import ITaskBar from './TaskBar.interface';
 function TaskBar(props:ITaskBar) {
   const {
     id,
-    done,
     note,
   } = props;
 
@@ -33,9 +32,8 @@ function TaskBar(props:ITaskBar) {
     setCompletedTasksCount,
   } = useContext(AppContext);
 
-  const thatBarId = id.toString();
-  const thatBarDoneState = done;
-  const thatBarNote = note;
+  const thatTaskId = id.toString();
+  const thatTaskNote = note;
 
   const handleSwitcherChange = (checked:boolean) => {
     const addendum = checked ? 1 : -1;
@@ -45,17 +43,22 @@ function TaskBar(props:ITaskBar) {
 
   const handleRemoverClick = () => {
     setTasks(
-      tasks.filter(({ id }) => id.toString() !== thatBarId),
+      tasks.filter(({ id }) => {
+        const iterableTaskId = id.toString();
+        return iterableTaskId !== thatTaskId;
+      }),
     );
     setTasksCount(tasksCount - 1);
 
-    if (thatBarDoneState) {
+    const thatTaskDoneState = false;
+
+    if (thatTaskDoneState) {
       setCompletedTasksCount(completedTasksCount - 1);
     }
   };
 
   return (
-    <div className="TaskBar" id={thatBarId}>
+    <div className="TaskBar" id={thatTaskId}>
       <div className="TaskBar__StateSwitcher">
         <Switch
           checkedChildren="DONE"
@@ -64,7 +67,7 @@ function TaskBar(props:ITaskBar) {
         />
       </div>
       <div className="TaskBar__Note">
-        <span>{thatBarNote}</span>
+        <span>{thatTaskNote}</span>
       </div>
       <div className="TaskBar__Remover">
         <Button
