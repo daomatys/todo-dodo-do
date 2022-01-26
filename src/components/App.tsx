@@ -22,7 +22,11 @@ function App() {
     setTasksCount,
     completedTasksCount,
     setCompletedTasksCount,
-  }), []);
+  }), [
+    tasks,
+    tasksCount,
+    completedTasksCount,
+  ]);
 
   return (
     <div className="App">
