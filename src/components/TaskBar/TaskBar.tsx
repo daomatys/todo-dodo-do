@@ -19,9 +19,15 @@ import ITaskBar from './TaskBar.interface';
 
 function TaskBar(props:ITaskBar) {
   const {
+    tasks,
+    setTasks,
+    tasksCount,
+    setTasksCount,
     completedTasksCount,
     setCompletedTasksCount,
   } = useContext(AppContext);
+
+  const thatTaskBarId = props.id.toString();
 
   const handleSwitcherChange = (checked:boolean) => {
     const addendum = checked ? 1 : -1 ;
@@ -30,11 +36,14 @@ function TaskBar(props:ITaskBar) {
   }
   
   const handleRemoverClick = () => {
-    // invoke context remove of that element
+    setTasks(
+      tasks.filter( task => task.id.toString() !== thatTaskBarId )
+    );
+    setTasksCount( tasksCount - 1);
   }
 
   return (
-    <div className="TaskBar" id={props.id.toString()}>
+    <div className="TaskBar" id={thatTaskBarId}>
       <div className="TaskBar__StateSwitcher">
         <Switch
           checkedChildren="DONE"
