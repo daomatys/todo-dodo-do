@@ -15,8 +15,9 @@ import {
 } from 'react';
 
 import AppContext from '../App.context';
+import ITaskBar from './TaskBar.interface';
 
-function TaskBar({ note }:{note:string}) {
+function TaskBar(props:ITaskBar) {
   const {
     completedTasksCount,
     setCompletedTasksCount,
@@ -33,7 +34,7 @@ function TaskBar({ note }:{note:string}) {
   }
 
   return (
-    <div className="TaskBar">
+    <div className="TaskBar" id={props.id.toString()}>
       <div className="TaskBar__StateSwitcher">
         <Switch
           checkedChildren="DONE"
@@ -42,7 +43,7 @@ function TaskBar({ note }:{note:string}) {
         />
       </div>
       <div className="TaskBar__Note">
-        <span>{note}</span>
+        <span>{props.note}</span>
       </div>
       <div className="TaskBar__Remover">
         <Button
