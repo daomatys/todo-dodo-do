@@ -9,15 +9,17 @@ import {
 import {
   DeleteOutlined,
 } from '@ant-design/icons';
-
+import ReactDOM from 'react-dom';
 import React from 'react';
 import ITaskBar from './TaskBar.interface';
 
 class TaskBar extends React.Component<ITaskBar> {
   note: string;
+  elem: React.RefObject<HTMLDivElement>;
 
   constructor(props:ITaskBar) {
     super(props);
+    this.elem = React.createRef();
     this.note = props.note;
   }
 
@@ -25,13 +27,23 @@ class TaskBar extends React.Component<ITaskBar> {
     console.log(`switch to ${checked}`);
   }
 
-  static handleRemoverClick() {
-    console.log('clicked');
+  handleRemoverClick() {
+    const elem = this.elem.current;
+
+    if (elem) {
+      ReactDOM.unmountComponentAtNode(elem);
+    }
+  }
+  
+  componentDidMount() {
+    
+    console.log('Mounted: ', this.elem)
   }
 
   render() {
+    console.log('render!');
     return (
-      <div className="task-bar">
+      <div className="task-bar" ref={this.elem}>
         <div className="task-bar__state-switcher">
           <Switch
             checkedChildren="DONE"
@@ -46,7 +58,7 @@ class TaskBar extends React.Component<ITaskBar> {
           <Button
             type="primary"
             icon={<DeleteOutlined />}
-            onClick={TaskBar.handleRemoverClick}
+            onClick={this.handleRemoverClick}
           />
         </div>
       </div>
