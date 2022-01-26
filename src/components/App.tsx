@@ -7,15 +7,21 @@ import ListOfTasks from './ListOfTasks/ListOfTasks';
 import CreatorOfTasks from './CreatorOfTasks/CreatorOfTasks';
 import ITaskBar from './TaskBar/TaskBar.interface';
 import AppContext from './App.context';
+import DEFAULTS from './App.defaults';
 
-const [tasks, setTasks] = useState(AppContext);
+const [tasks, setTasks] = useState(DEFAULTS.tasks);
+const [tasksCount, setTasksCount] = useState(DEFAULTS.count);
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <AppContext.Provider
-          value={[]}
+          value={{
+            setTasks,
+            setTasksCount,
+
+          }}
         >
           <CreatorOfTasks />
           <ListOfTasks
