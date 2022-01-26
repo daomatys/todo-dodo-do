@@ -14,10 +14,10 @@ function handleInvokerClick() {
 }
 
 function createNewTask() {
-  //there
+  // there
 }
 
-function createNewTaskOnEnterPressed({key}: {key:string}) {
+function createNewTaskOnEnterPressed({ key }: {key:string}) {
   if (key === 'Enter') {
     createNewTask();
   }

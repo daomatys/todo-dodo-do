@@ -18,7 +18,7 @@ function handleSwitcherChange(checked:boolean) {
 }
 
 function handleRemoverClick() {
-  //invoke context remove of that element
+  // invoke context remove of that element
 }
 
 function TaskBar(props:ITaskBar) {

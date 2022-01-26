@@ -1,11 +1,10 @@
 import {
-  useState
+  useState,
 } from 'react';
 
 import './App.css';
 import ListOfTasks from './ListOfTasks/ListOfTasks';
 import CreatorOfTasks from './CreatorOfTasks/CreatorOfTasks';
-import ITaskBar from './TaskBar/TaskBar.interface';
 import AppContext from './App.context';
 import DEFAULTS from './App.defaults';
 
@@ -20,7 +19,6 @@ function App() {
           value={{
             setTasks,
             setTasksCount,
-
           }}
         >
           <CreatorOfTasks />
