@@ -2,7 +2,7 @@ import './CreatorOfTasks.css';
 import {
   Button,
   Input,
-  Form
+  Form,
 } from 'antd';
 
 import {
@@ -32,7 +32,7 @@ function CreatorOfTasks() {
   };
 
   const createNewTask = () => {
-    if ( inputValue.length > 0 ) {
+    if (inputValue.length > 0) {
       setTasks([
         ...tasks,
         {
@@ -51,8 +51,8 @@ function CreatorOfTasks() {
   };
 
   const onFinishFailed = () => {
-    return;
-  }
+
+  };
 
   return (
     <div className="CreatorOfTasks">
@@ -73,7 +73,7 @@ function CreatorOfTasks() {
           <Input.Group compact>
             <Form.Item
               rules={[
-                { required: true, len: 20, type: 'string' }
+                { required: true, len: 20, type: 'string' },
               ]}
             >
               <Input
@@ -81,7 +81,7 @@ function CreatorOfTasks() {
                 style={{ width: '100%' }}
                 placeholder="Whatcha gonna achieve?"
                 onKeyPress={createNewTaskOnEnterPressed}
-                onChange={({target}) => setInputValue(target.value)}
+                onChange={({ target }) => setInputValue(target.value)}
               />
             </Form.Item>
             <Button

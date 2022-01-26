@@ -1,5 +1,5 @@
 import {
-  useContext
+  useContext,
 } from 'react';
 
 import AppContext from '../App.context';
@@ -8,7 +8,7 @@ import './StatCollector.css';
 function StatCollector() {
   const {
     tasksCount,
-    completedTasksCount
+    completedTasksCount,
   } = useContext(AppContext);
 
   return (

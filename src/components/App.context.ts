@@ -20,10 +20,10 @@ const DefaultAppContext:IAppContext = {
   tasks: alpha,
   tasksCount: beta,
   completedTasksCount: beta,
-  setTasks: (alpha) => { return },
-  setTasksCount: (beta) => { return },
-  setCompletedTasksCount: (beta) => { return },
-}
+  setTasks: (alpha) => { },
+  setTasksCount: (beta) => { },
+  setCompletedTasksCount: (beta) => { },
+};
 
 const AppContext = React.createContext<IAppContext>(DefaultAppContext);
 
