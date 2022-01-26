@@ -3,4 +3,18 @@
   flex-direction: column;
   gap: 10px;
   width: 100%;
+  max-height: 333px;
+  overflow-y: auto;
+}
+
+.ListOfTasks::-webkit-scrollbar {
+  width: 15px;
+  background-color: #666666;
+  border-radius: 7px;
+  height: 200px;
+}
+
+.ListOfTasks::-webkit-scrollbar-thumb {
+  background-color: #bdbdbd;
+  border-radius: 7px;
 }
