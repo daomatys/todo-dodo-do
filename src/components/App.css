@@ -1,3 +1,21 @@
+@media only screen and (max-width: 384px) {
+  .App-header {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 384px) {
+  .App-header {
+    width: 384px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .App-header {
+    width: 50vw;
+  }
+}
+
 .App,
 .App-header {
   display: flex;
@@ -13,5 +31,4 @@
   flex-direction: column;
   color: white;
   min-height: 100vh;
-  width: 50vw;
 }
