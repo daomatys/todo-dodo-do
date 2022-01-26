@@ -5,7 +5,7 @@ import ITaskBar from '../TaskBar/TaskBar.interface';
 function ListOfTasks({ tasks }: { tasks: ITaskBar[] }) {
   return (
     <div className="ListOfTasks">
-      {tasks.map((task) => <TaskBar key={task.note} note={task.note} />)}
+      {tasks.map((task) => <TaskBar key={task.id} note={task.note} />)}
     </div>
   );
 }
