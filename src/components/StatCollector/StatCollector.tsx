@@ -15,8 +15,11 @@ function StatCollector() {
     return (
       <div className="StatCollector">
         <span className="StatCollector__TasksCount_Completed">{completedTasksCount}</span>
+        {' '}
         of
+        {' '}
         <span className="StatCollector__TasksCount_Overall">{tasksCount}</span>
+        {' '}
         tasks were completed
       </div>
     );
@@ -31,7 +34,10 @@ function StatCollector() {
   return (
     <div className="StatCollector">
       <span className="StatCollector__TasksCount_Overall">1</span>
-      task was{ completedTasksCount > 0 ? '' : 'n\'t' } completed
+      task was
+      { completedTasksCount > 0 ? '' : 'n\'t' }
+      {' '}
+      completed
     </div>
   );
 }

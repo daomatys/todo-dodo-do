@@ -1,21 +1,13 @@
 .StatCollector {
-  display: flex;
   font-size: 1.5rem;
-  align-items: baseline;
-  justify-content: center;
   min-width: 320px;
   line-height: 2rem;
 }
 
 .StatCollector__TasksCount_Overall,
 .StatCollector__TasksCount_Completed {
-  margin-inline-end: 9px;
   font-size: 2rem;
   font-weight: 700;
-}
-
-.StatCollector__TasksCount_Overall {
-  margin-inline-start: 10px;
 }
 
 .StatCollector__TasksCount_Completed {

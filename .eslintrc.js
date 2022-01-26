@@ -24,7 +24,7 @@ module.exports = {
   ],
   ignorePatterns: [
     '_blank',
-    '*.interface.tsx'
+    '*.interface.ts'
   ],
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
