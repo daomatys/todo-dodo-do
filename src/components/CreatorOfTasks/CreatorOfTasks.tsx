@@ -17,6 +17,10 @@ function handleAcceptorClick() {
   // push new list example
 }
 
+function createNewTask() {
+  
+}
+
 function CreatorOfTasks() {
   return (
     <div className="CreatorOfTasks">
@@ -32,6 +36,7 @@ function CreatorOfTasks() {
           <Input
             style={{ width: 'calc(100% - 32px)' }}
             placeholder="Whatcha gonna achieve?"
+            onKeyPress={createNewTask}
           />
           <Button
             type="primary"
