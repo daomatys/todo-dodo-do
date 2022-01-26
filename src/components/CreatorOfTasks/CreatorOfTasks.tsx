@@ -59,6 +59,7 @@ function CreatorOfTasks() {
       </div>
       <div className="CreatorOfTasks__EjectorContent">
         <Form
+          style={{ width: '100%' }}
           onFinish={createNewTask}
           onFinishFailed={onFinishFailed}
           autoComplete="off"
@@ -70,7 +71,7 @@ function CreatorOfTasks() {
               ]}
             >
               <Input
-                style={{ width: 'calc(100% - 32px)' }}
+                style={{ width: '100%' }}
                 placeholder="Whatcha gonna achieve?"
                 onKeyPress={createNewTaskOnEnterPressed}
               />

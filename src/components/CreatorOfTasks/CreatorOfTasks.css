@@ -1,10 +1,6 @@
 .CreatorOfTasks {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  width: 100%;
-}
-
-.CreatorOfTasks__EjectorContent {
+  justify-content: space-around;
+  margin-bottom: 10px;
   width: 100%;
 }
