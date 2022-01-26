@@ -4,6 +4,7 @@
   align-items: baseline;
   justify-content: center;
   min-width: 320px;
+  line-height: 2rem;
 }
 
 .StatCollector__TasksCount_Overall,
