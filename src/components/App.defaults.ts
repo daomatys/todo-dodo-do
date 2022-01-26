@@ -7,7 +7,7 @@ const DEFAULTS = {
   tasks: [
     {
       id: correctDate(firstDate),
-      note: 'Go and do the first case, c\'mon!',
+      note: 'Go crash the first case, c\'mon!',
     },
     {
       id: correctDate(lastDate),
