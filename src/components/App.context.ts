@@ -12,10 +12,8 @@ interface ICountFunction {
 interface IAppContext {
   tasks: ITaskBar[],
   setTasks: ITaskFunction,
-
   tasksCount: number,
   setTasksCount: ICountFunction,
-
   completedTasksCount: number,
   setCompletedTasksCount: ICountFunction,
 }

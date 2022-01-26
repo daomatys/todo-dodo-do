@@ -1,5 +1,4 @@
 import './TaskBar.css';
-import 'antd/dist/antd.css';
 
 import {
   Switch,

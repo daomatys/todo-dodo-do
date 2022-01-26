@@ -27,6 +27,7 @@ module.exports = {
     '*.interface.tsx'
   ],
   rules: {
+    '@typescript-eslint/no-unused-vars': 'warn',
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'react/jsx-filename-extension': [
