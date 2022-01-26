@@ -36,6 +36,7 @@ function CreatorOfTasks() {
       setTasks([
         ...tasks,
         {
+          id: Date.now(),
           note: inputValue,
         },
       ]);
