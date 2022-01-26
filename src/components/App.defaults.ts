@@ -6,10 +6,12 @@ const DEFAULTS = {
     {
       id: firstDate.getTime()/1000,
       note: 'Go and do the first case, c\'mon!',
+      done: false,
     },
     {
       id: lastDate.getTime()/1000,
       note: 'Then finish the last one.',
+      done: false,
     },
   ],
   count: 2,

@@ -38,6 +38,7 @@ function CreatorOfTasks() {
         {
           id: Date.now(),
           note: inputValue,
+          done: false,
         },
       ]);
       setTasksCount(tasksCount + 1);

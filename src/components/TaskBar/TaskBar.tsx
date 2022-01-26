@@ -40,6 +40,10 @@ function TaskBar(props:ITaskBar) {
       tasks.filter( task => task.id.toString() !== thatTaskBarId )
     );
     setTasksCount( tasksCount - 1);
+    
+    if( props.done ) {
+      setCompletedTasksCount( completedTasksCount - 1 );
+    }
   }
 
   return (
