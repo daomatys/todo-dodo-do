@@ -1,6 +1,7 @@
 .CreatorOfTasks {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px;
+
+  margin-block: 10px 30px;
   width: 100%;
 }
