@@ -16,6 +16,7 @@ import ITaskBar from './TaskBar.interface';
 
 class TaskBar extends React.Component<ITaskBar> {
   note: string;
+
   elem: React.RefObject<HTMLDivElement>;
 
   constructor(props:ITaskBar) {
@@ -25,7 +26,7 @@ class TaskBar extends React.Component<ITaskBar> {
   }
 
   static handleSwitcherChange(checked:boolean) {
-    console.log(`switch to ${checked}`);
+    // toggle task state
   }
 
   handleRemoverClick() {
@@ -37,7 +38,6 @@ class TaskBar extends React.Component<ITaskBar> {
   }
 
   render() {
-    console.log('render!');
     return (
       <div className="TaskBar" ref={this.elem}>
         <div className="TaskBar__StateSwitcher">

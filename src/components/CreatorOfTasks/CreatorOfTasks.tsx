@@ -1,20 +1,20 @@
 import './CreatorOfTasks.css';
 import {
   Button,
-  Input
+  Input,
 } from 'antd';
 
 import {
   PlusOutlined,
-  DoubleRightOutlined
+  DoubleRightOutlined,
 } from '@ant-design/icons';
 
 function handleInvokerClick() {
-  //invoke the damned ejector
+  // invoke the damned ejector
 }
 
 function handleAcceptorClick() {
-  //push new list example
+  // push new list example
 }
 
 function CreatorOfTasks() {
