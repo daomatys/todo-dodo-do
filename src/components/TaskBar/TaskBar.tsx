@@ -19,9 +19,11 @@ import ITaskBar from './TaskBar.interface';
 
 function TaskBar(props:ITaskBar) {
   const {
-    id,
-    note,
+    id: TaskBarId,
+    note: thatTaskNote,
   } = props;
+
+  const thatTaskId = TaskBarId.toString();
 
   const {
     tasks,
@@ -31,9 +33,6 @@ function TaskBar(props:ITaskBar) {
     completedTasksCount,
     setCompletedTasksCount,
   } = useContext(AppContext);
-
-  const thatTaskId = id.toString();
-  const thatTaskNote = note;
 
   const handleSwitcherChange = (checked:boolean) => {
     const addendum = checked ? 1 : -1;
@@ -50,9 +49,10 @@ function TaskBar(props:ITaskBar) {
     );
     setTasksCount(tasksCount - 1);
 
-    const thatTaskDoneState = false;
+    const thatTaskElem = document.getElementById(thatTaskId);
+    const thatTaskIsDone = thatTaskElem?.querySelector('.ant-switch-checked');
 
-    if (thatTaskDoneState) {
+    if (thatTaskIsDone) {
       setCompletedTasksCount(completedTasksCount - 1);
     }
   };
