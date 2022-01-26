@@ -28,19 +28,17 @@ function CreatorOfTasks() {
         />
       </div>
       <div className="CreatorOfTasks__EjectorContent">
-        <div className="CreatorOfTasks__Input">
-          <Input.Group compact>
-            <Input
-              style={{ width: 'calc(100% - 32px)' }}
-              placeholder="Whatcha gonna reach today"
-            />
-            <Button
-              type="primary"
-              icon={<PlusOutlined />}
-              onClick={handleAcceptorClick}
-            />
-          </Input.Group>
-        </div>
+        <Input.Group compact>
+          <Input
+            style={{ width: 'calc(100% - 32px)' }}
+            placeholder="Whatcha gonna reach today"
+          />
+          <Button
+            type="primary"
+            icon={<PlusOutlined />}
+            onClick={handleAcceptorClick}
+          />
+        </Input.Group>
       </div>
     </div>
   );
