@@ -1,4 +1,4 @@
-.task-bar {
+.TaskBar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,6 +8,6 @@
   background-color: #000;
 }
 
-.task-bar__state-switcher {
+.TaskBar__StateSwitcher {
   width: 65px;
 }

@@ -42,18 +42,18 @@ class TaskBar extends React.Component<ITaskBar> {
   render() {
     console.log('render!');
     return (
-      <div className="task-bar" ref={this.elem}>
-        <div className="task-bar__state-switcher">
+      <div className="TaskBar" ref={this.elem}>
+        <div className="TaskBar__StateSwitcher">
           <Switch
             checkedChildren="DONE"
             unCheckedChildren="LAZY"
             onChange={TaskBar.handleSwitcherChange}
           />
         </div>
-        <div className="task-bar__note">
+        <div className="TaskBar__Note">
           <span>{this.note}</span>
         </div>
-        <div className="task-bar__remover">
+        <div className="TaskBar__Remover">
           <Button
             type="primary"
             icon={<DeleteOutlined />}
