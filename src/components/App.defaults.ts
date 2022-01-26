@@ -1,14 +1,16 @@
 const firstDate = new Date(1995, 9, 19);
 const lastDate = new Date(1995, 12, 18);
 
+const correctDate = (date:Date) => date.getTime() / 1000;
+
 const DEFAULTS = {
   tasks: [
     {
-      id: firstDate.getTime() / 1000,
+      id: correctDate(firstDate),
       note: 'Go and do the first case, c\'mon!',
     },
     {
-      id: lastDate.getTime() / 1000,
+      id: correctDate(lastDate),
       note: 'Then finish the last one.',
     },
   ],
