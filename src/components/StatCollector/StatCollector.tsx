@@ -12,7 +12,7 @@ function StatCollector() {
 
   return (
     <div className="StatCollector">
-      <span className="StatCollector__TasksCount_Completed"></span>
+      <span className="StatCollector__TasksCount_Completed">0</span>
       of
       <span className="StatCollector__TasksCount_Overall">{tasksCount}</span>
       tasks were completed

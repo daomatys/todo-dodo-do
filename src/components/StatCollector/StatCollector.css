@@ -3,14 +3,18 @@
   font-size: 1.5rem;
   align-items: baseline;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  min-width: 320px;
 }
 
 .StatCollector__TasksCount_Overall,
 .StatCollector__TasksCount_Completed {
-  margin-inline: 10px;
-  font-size: 3rem;
+  margin-inline-end: 9px;
+  font-size: 2rem;
   font-weight: 700;
+}
+.StatCollector__TasksCount_Overall {
+  margin-inline-start: 10px;
 }
 
 .StatCollector__TasksCount_Completed {
