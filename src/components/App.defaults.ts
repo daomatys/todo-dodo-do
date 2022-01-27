@@ -1,16 +1,13 @@
-const firstDate = new Date(1995, 9, 19);
-const lastDate = new Date(1995, 12, 18);
-
-const correctDate = (date:Date) => date.getTime() / 1000;
+const defineIdByNum = (num:number):string => `task-${num}`;
 
 const DEFAULTS = {
   tasks: [
     {
-      id: correctDate(firstDate),
+      id: defineIdByNum(1),
       note: 'Go crash the first case, c\'mon!',
     },
     {
-      id: correctDate(lastDate),
+      id: defineIdByNum(2),
       note: 'Then finish the last one.',
     },
   ],

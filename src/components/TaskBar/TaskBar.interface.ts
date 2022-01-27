@@ -1,4 +1,4 @@
 export default interface ITaskBar {
-  id: number,
+  id: string,
   note: string,
 }

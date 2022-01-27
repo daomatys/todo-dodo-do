@@ -18,11 +18,9 @@ import ITaskBar from './TaskBar.interface';
 
 function TaskBar(props:ITaskBar) {
   const {
-    id: TaskBarId,
+    id: thatTaskId,
     note: thatTaskNote,
   } = props;
-
-  const thatTaskId = TaskBarId.toString();
 
   const {
     tasks,
@@ -40,12 +38,9 @@ function TaskBar(props:ITaskBar) {
   };
 
   const handleRemoverClick = () => {
-    setTasks(
-      tasks.filter(({ id }) => {
-        const iterableTaskId = id.toString();
-        return iterableTaskId !== thatTaskId;
-      }),
-    );
+    setTasks(tasks.filter(
+      ({ id }) => (thatTaskId !== id),
+    ));
     setTasksCount(tasksCount - 1);
 
     const thatTaskElem = document.getElementById(thatTaskId);

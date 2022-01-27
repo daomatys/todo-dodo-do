@@ -3,7 +3,7 @@ import TaskBar from './TaskBar';
 
 test('renders learn react link', () => {
   render(<TaskBar
-    id={143}
+    id="xxx"
     note="text"
   />);
   const linkElement = screen.getByText(/learn react/i);
