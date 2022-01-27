@@ -14,6 +14,7 @@ import {
   useState,
 } from 'react';
 
+import defineIdByNum from 'src/lib/DefineIdByNum';
 import AppContext from '../App.context';
 
 function CreatorOfTasks() {
@@ -30,11 +31,13 @@ function CreatorOfTasks() {
     const fixedInputValue = inputValue.trim();
 
     if (fixedInputValue.length > 0) {
-      setTasksCount(tasksCount + 1);
+      const newTasksCount = tasksCount + 1;
+
+      setTasksCount(newTasksCount);
       setTasks([
         ...tasks,
         {
-          id: `task-${tasksCount + 1}`,
+          id: defineIdByNum(newTasksCount),
           note: inputValue,
         },
       ]);
