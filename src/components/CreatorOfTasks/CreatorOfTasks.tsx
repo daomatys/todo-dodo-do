@@ -42,7 +42,9 @@ function CreatorOfTasks() {
         },
       ]);
     }
-    setInputValue('');
+    if (inputValue.length !== 0) {
+      setInputValue('');
+    }
   };
 
   return (
