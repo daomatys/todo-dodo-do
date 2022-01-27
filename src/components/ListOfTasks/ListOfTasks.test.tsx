@@ -11,6 +11,10 @@ test('renders learn react link', () => {
   const taskSamples:ITaskBar[] = DEFAULT.tasks;
 
   render(<ListOfTasks tasks={taskSamples} />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  
+  const firstCase = screen.getByText(/Go crash the first case/i);
+  const lastCase = screen.getByText(/Then finish the last one./i);
+
+  expect(firstCase).toBeInTheDocument();
+  expect(lastCase).toBeInTheDocument();
 });

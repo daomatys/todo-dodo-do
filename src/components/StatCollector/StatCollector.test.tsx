@@ -6,6 +6,6 @@ import StatCollector from './StatCollector';
 
 test('renders learn react link', () => {
   render(<StatCollector />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const statElement = screen.getByText(/completed/i);
+  expect(statElement).toBeInTheDocument();
 });

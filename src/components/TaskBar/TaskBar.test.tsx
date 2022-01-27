@@ -4,8 +4,8 @@ import TaskBar from './TaskBar';
 test('renders learn react link', () => {
   render(<TaskBar
     id="xxx"
-    note="text"
+    note="TeStTeXt"
   />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const taskBarElement = screen.getByText(/TeStTeXt/i);
+  expect(taskBarElement).toBeInTheDocument();
 });
