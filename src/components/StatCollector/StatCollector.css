@@ -1,7 +1,7 @@
 .StatCollector {
   font-size: 1.5rem;
-  min-width: 320px;
   line-height: 2rem;
+  width: 100%;
 }
 
 .StatCollector__TasksCount_Overall,
