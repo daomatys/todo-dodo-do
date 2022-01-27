@@ -11,3 +11,8 @@
 .TaskBar__StateSwitcher {
   width: 65px;
 }
+
+.TaskBar__Note {
+  overflow-x: clip;
+  margin-inline: 5px;
+}
