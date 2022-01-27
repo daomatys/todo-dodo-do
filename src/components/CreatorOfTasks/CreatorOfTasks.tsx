@@ -27,27 +27,19 @@ function CreatorOfTasks() {
   const [inputValue, setInputValue] = useState('');
 
   const createNewTask = () => {
-    if (inputValue.length > 0) {
+    const fixedInputValue = inputValue.trim();
+
+    if (fixedInputValue.length > 0) {
+      setTasksCount(tasksCount + 1);
       setTasks([
         ...tasks,
         {
-          id: Date.now(),
+          id: `task-${tasksCount + 1}`,
           note: inputValue,
         },
       ]);
-      setTasksCount(tasksCount + 1);
-      setInputValue('');
     }
-  };
-
-  const createNewTaskOnEnterPressed = ({ key }: {key:string}) => {
-    if (key === 'Enter') {
-      createNewTask();
-    }
-  };
-
-  const onFinishFailed = () => {
-
+    setInputValue('');
   };
 
   return (
@@ -55,20 +47,15 @@ function CreatorOfTasks() {
       <Form
         style={{ width: '100%' }}
         onFinish={createNewTask}
-        onFinishFailed={onFinishFailed}
         autoComplete="off"
       >
         <Input.Group compact>
-          <Form.Item
+          <Input
             style={{ width: 'calc(100% - 32px)', margin: 0 }}
-          >
-            <Input
-              value={inputValue}
-              placeholder="Whatcha gonna achieve?"
-              onKeyPress={createNewTaskOnEnterPressed}
-              onChange={({ target }) => setInputValue(target.value)}
-            />
-          </Form.Item>
+            placeholder="Whatcha gonna achieve?"
+            value={inputValue}
+            onChange={({ target }) => setInputValue(target.value)}
+          />
           <Button
             type="primary"
             icon={<PlusOutlined />}

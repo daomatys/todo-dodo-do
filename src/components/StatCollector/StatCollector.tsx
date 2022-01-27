@@ -34,6 +34,7 @@ function StatCollector() {
   return (
     <div className="StatCollector">
       <span className="StatCollector__TasksCount_Overall">1</span>
+      {' '}
       task was
       { completedTasksCount > 0 ? '' : 'n\'t' }
       {' '}
