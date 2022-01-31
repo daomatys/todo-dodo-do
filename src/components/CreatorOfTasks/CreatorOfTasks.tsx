@@ -35,11 +35,11 @@ function CreatorOfTasks() {
 
       setTasksCount(newTasksCount);
       setTasks([
-        ...tasks,
         {
           id: defineIdByNum(newTasksCount),
           note: inputValue,
         },
+        ...tasks,
       ]);
     }
     if (inputValue.length !== 0) {
